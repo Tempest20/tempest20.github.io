@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>MyWeather App</title>
+</head>
+<body>
+    
+    <header>
+        <h1>MyWeather</h1>
+    </header>
+
+    <img src="pic.jpg" class="bg-image">
+
+        <div class="input-container">
+            <div class="input-box">
+                <input type="text" placeholder="Enter location ..." id="cityInput"> <br>
+                <button id="button">Submit</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="weather-container">
+            <p >City: </p> <span id="cityName"></span> <br><br>
+            <p >Temperature: </p> <span id="temp"></span> <br><br>
+            <p >Description: </p> <span id="desc"></span> <br><br>
+        </div>
+
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // some pretty hover animations
+            $("#button").hover(function() {
+                $(this).animate({opacity: 1}, 1);
+            }, function() {
+                $(this).animate({opacity: 0.9}, 1);
+            });
+        })
+    </script>
+
+</body>
+</html>
